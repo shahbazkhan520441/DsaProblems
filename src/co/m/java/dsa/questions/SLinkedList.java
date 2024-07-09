@@ -24,6 +24,18 @@ public  void add(Object data) {
 
 }
 
-
+public void display() {
+	Node temp=head;
+	while(temp!=null) {
+	
+		if(temp.data!=null) {
+			System.out.println(temp.data);
+			System.out.println("->");
+			temp=temp.next;	
+		}
+		System.out.println();
+		
+	}
+}
 
 }
