@@ -38,4 +38,30 @@ public void display() {
 	}
 }
 
+
+
+public void add(Object data,int in) {
+	Node temp;
+	Node n=new Node(data);
+	if(in==0) {
+		n.next=head;
+		head=n;
+		return;
+		
+	}
+	temp=head;
+	while(in > 1&& temp !=null) {
+		temp=temp.next;
+		in--;
+	}
+	if(temp==null) {
+		System.out.println("index out of range");
+		return;
+	}
+	
+	n.next=temp.next;
+	temp.next=n;
+	
+}
+
 }
